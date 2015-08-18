@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jabbah-dev] OpenSSL Digests Change
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jabbah-dev/2006-July/index.html" >
+   <LINK REL="made" HREF="mailto:jabbah-dev%40lists.berlios.de?Subject=Re%3A%20%5BJabbah-dev%5D%20OpenSSL%20Digests%20Change&In-Reply-To=%3C20060716220914.GA17616%400xbadc0ffe.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jabbah-dev] OpenSSL Digests Change</H1>
+    <B>Frango ssauro</B> 
+    <A HREF="mailto:jabbah-dev%40lists.berlios.de?Subject=Re%3A%20%5BJabbah-dev%5D%20OpenSSL%20Digests%20Change&In-Reply-To=%3C20060716220914.GA17616%400xbadc0ffe.org%3E"
+       TITLE="[Jabbah-dev] OpenSSL Digests Change">frangossauro at gmail.com
+       </A><BR>
+    <I>Mon Jul 17 00:09:14 CEST 2006</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello, im asking the oppinion of the others developers to change
+the old sha1 interface.
+
+Since the project will use ssl, and the openssl library(hopefully), i
+change the code of the digest_pass(auth.c) to use openssl crypto.
+
+Is anyone against that? Can i commit the changes in the cvs?
+
+Ps: Since its my firts post, i will announce the changes that i
+make in the code.
+
+1: Change strcpy to the openbsd function strlcpy(more secure and
+faster). Bytheway, strlcpy its not a default function, so, i include
+it in common.c
+
+2: Change in configure.in to identify openssl library(default)
+3: Fix compiling error in message.
+
+-- 
+
+ l___l 	  		
+c|. o|C    		Gentoo Linux - Larry The Cow
+ |___|   		&quot;who needs reasons, when you've got heroin?&quot;
+ `---' 			Vitor alves calejuri 		gpg: 7AFA64D0
+   
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/jabbah-dev/attachments/20060716/89719c69/attachment.pgp">https://lists.berlios.de/pipermail/jabbah-dev/attachments/20060716/89719c69/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jabbah-dev">More information about the Jabbah-dev
+mailing list</a><br>
+</body></html>

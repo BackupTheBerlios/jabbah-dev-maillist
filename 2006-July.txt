@@ -1,0 +1,39 @@
+From frangossauro at gmail.com  Mon Jul 17 00:09:14 2006
+From: frangossauro at gmail.com (Frango ssauro)
+Date: Sun, 16 Jul 2006 19:09:14 -0300
+Subject: [Jabbah-dev] OpenSSL Digests Change
+Message-ID: <20060716220914.GA17616@0xbadc0ffe.org>
+
+Hello, im asking the oppinion of the others developers to change
+the old sha1 interface.
+
+Since the project will use ssl, and the openssl library(hopefully), i
+change the code of the digest_pass(auth.c) to use openssl crypto.
+
+Is anyone against that? Can i commit the changes in the cvs?
+
+Ps: Since its my firts post, i will announce the changes that i
+make in the code.
+
+1: Change strcpy to the openbsd function strlcpy(more secure and
+faster). Bytheway, strlcpy its not a default function, so, i include
+it in common.c
+
+2: Change in configure.in to identify openssl library(default)
+3: Fix compiling error in message.
+
+-- 
+
+ l___l 	  		
+c|. o|C    		Gentoo Linux - Larry The Cow
+ |___|   		"who needs reasons, when you've got heroin?"
+ `---' 			Vitor alves calejuri 		gpg: 7AFA64D0
+   
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/jabbah-dev/attachments/20060716/89719c69/attachment.pgp>
+
